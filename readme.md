@@ -22,7 +22,7 @@
 
 
 ## References
-- [Laravel 4](https://github.com/laravel/laravel): Server side PHP framework
+- [Laravel 4](https://github.com/laravel/laravel): Server side PHP framework 
 - [Persona](https://developer.mozilla.org/en-US/Persona): Email authentication service
 - [Twitter Bootstrap](http://getbootstrap.com/getting-started/): Beautiful user interfaces
 - [Font Awesome](http://fontawesome.io/): Beautiful HTML icons
