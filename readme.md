@@ -26,7 +26,3 @@
 - [Persona](https://developer.mozilla.org/en-US/Persona): Email authentication service
 - [Twitter Bootstrap](http://getbootstrap.com/getting-started/): Beautiful user interfaces
 - [Font Awesome](http://fontawesome.io/): Beautiful HTML icons
-
-
-## License
-[Mozilla Public Liscense v2.0](LICENSE)
