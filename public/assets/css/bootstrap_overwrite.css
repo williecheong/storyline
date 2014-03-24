@@ -1,0 +1,53 @@
+body {
+	margin: 1% 5% 2%;
+}
+
+.sl-logo{
+	margin-top: 20px;
+}
+
+.sl-nav{
+	margin-top: 20px;
+}
+
+.sl-user{
+	margin-top: 20px;
+}
+
+.sl-footer{
+	--margin-top:50px;
+
+}
+
+.report_bug{
+	--margin-top: 50px;
+}
+
+.registration,.login_credential,.old_password, .password, .confirm_password{
+	width: auto;
+}
+
+
+.change-password{
+	display:none;
+	margin-top:10px;
+}
+
+.change-password input, .login_credential input, .registration input{
+	display: table-column;
+	margin-bottom: 10px;
+}
+
+.fb_signin{
+	margin-top:10px;
+}
+
+.signin{
+	margin-right:10px;
+}
+
+.reg_submit{
+	margin-right:10px;
+	margin-top: 20px;
+}
+
