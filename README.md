@@ -1,5 +1,5 @@
 # StoryLine
-Change logs, progress updates and latest developments on [this spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0ApNDjYXWm5JndGJkdkFtN3NJQVdJVk9qcElqaGJ1NVE#gid=0).
+Change logs, progress updates and latest developments on [this spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0ApNDjYXWm5JndGJkdkFtN3NJQVdJVk9qcElqaGJ1NVE&usp=sharing).
 
 ## Features
 - To be continued
