@@ -1,1 +1,0 @@
-This is part of a Swift Mailer v4 smoke test.
