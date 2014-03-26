@@ -22,7 +22,9 @@ Change logs, progress updates and latest developments on [this spreadsheet](http
 
 
 ## References
-- [Laravel 4](https://github.com/laravel/laravel): Server side PHP framework 
+- [CodeIgniter](http://ellislab.com/codeigniter): Server side PHP framework
+- [CI Blades](https://github.com/laperla/codeigniter-Blade): Laravel style blade templating on CodeIgniter
+- [CI RestServer](https://github.com/philsturgeon/codeigniter-restserver): Support for REST APIs on CodeIgniter
 - [Persona](https://developer.mozilla.org/en-US/Persona): Email authentication service
 - [Twitter Bootstrap](http://getbootstrap.com/getting-started/): Beautiful user interfaces
 - [Font Awesome](http://fontawesome.io/): Beautiful HTML icons
