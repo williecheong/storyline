@@ -11,30 +11,30 @@ class Main extends CI_Controller {
         $data = array();
         $user_email = $this->session->userdata('email');
         
-        $chapters = Story::find($sid)->chapters ; 
-        
+        $chapters = (array) $this->chapter->retrieve();
+        $chapters = $chapters;
         //removes all chapters with nothing to display
-        foreach ( $chapters as $ckey => $chapter ) {
-            $chap_display = '';
+        foreach ( $chapters as $chapter_key => $chapter ) {
+            $chapter_display = '';
 
-            $paragraphs = Chapter::find($chapter['chap_id'])->paragraphs;
-            $chapters[$ckey]['paragraphs'] = $paragraphs;
+            $paragraphs = (array) $this->paragraph->retrieve( array('chapter_id'=>$chapter->id) );
+            $chapters[$chapter_key]->paragraphs = $paragraphs;
             
             //removes all paragraphs with nothing to display
-            foreach ( $paragraphs as $pkey => $paragraph ) {
-                $paragraphs[$pkey] = $paragraph;
+            foreach ( $paragraphs as $paragraph_key => $paragraph ) {
+                $paragraphs[$paragraph_key] = $paragraph;
                 
-                $para_display = EasyParagraph::htmlreadify( EasyParagraph::untrack($paragraph['content']) );
-                if ( strlen($para_display) === 0 ) {
-                    unset( $paragraphs[$pkey] );
+                $paragraph_display = htmlreadify( untrack($paragraph->content) );
+                if ( strlen($paragraph_display) === 0 ) {
+                    unset( $paragraphs[$paragraph_key] );
                         
                 } else {
                     //fills up the chapter display for evaluation after this loop ends
-                    $chap_display = $chap_display . $para_display;
+                    $chapter_display = $chapter_display . $paragraph_display;
                 }
             }
-            if ( strlen($chap_display) === 0 ) {
-                unset( $chapters[$ckey] );
+            if ( strlen($chapter_display) === 0 ) {
+                unset( $chapters[$chapter_key] );
             }
             
         }
@@ -43,8 +43,8 @@ class Main extends CI_Controller {
         $this->blade->render('main', 
             array(
                 'user_email' => $user_email,
-                'chapters' => $chapters,
-                'story' => Story::find($sid)->toArray()
+                'chapters'   => $chapters,
+                'settings'   => $this->setting->retrieve_pairs()
             )
         );
     }

@@ -2,8 +2,8 @@
     //makes an untracked paragraph easy to read in plain text
     function textreadify ( $paragraph ) {
     
-        $paragraph = EasyText::singlelines( $paragraph );
-        $paragraph = EasyText::singlespaces ( $paragraph );
+        $paragraph = singlelines( $paragraph );
+        $paragraph = singlespaces ( $paragraph );
         
         return trim($paragraph);
     }
@@ -11,9 +11,9 @@
     //makes an untracked paragraph easy to read on html
     function htmlreadify ( $paragraph ) {
         
-        $paragraph = EasyText::singlelines( $paragraph );
-        $paragraph = EasyText::singlespaces ( $paragraph );
-        $paragraph = EasyText::htmlbreaks ( $paragraph );
+        $paragraph = singlelines( $paragraph );
+        $paragraph = singlespaces ( $paragraph );
+        $paragraph = htmlbreaks ( $paragraph );
         
         return trim($paragraph);
     }
@@ -22,10 +22,10 @@
     //good for using when rejecting a contribution.
     function removePart( $paragraph = '' , $part = array() ) {
         if ( $part['insdel'] === 1 ) { //part is specifying an insert
-            $paragraph = preg_replace('/@'.$part['part_id'].'@/', '', $paragraph);
+            $paragraph = preg_replace('/@'.$part->id.'@/', '', $paragraph);
         } else { // part is specifying a delete
-            $paragraph = preg_replace('/{'.$part['part_id'].'{/', '', $paragraph);
-            $paragraph = preg_replace('/}'.$part['part_id'].'}/' , '', $paragraph);
+            $paragraph = preg_replace('/{'.$part->id.'{/', '', $paragraph);
+            $paragraph = preg_replace('/}'.$part->id.'}/' , '', $paragraph);
         }
         return $paragraph;
     }
